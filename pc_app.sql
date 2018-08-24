@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50719
 File Encoding         : 65001
 
-Date: 2018-08-17 18:39:41
+Date: 2018-08-24 17:58:24
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -144,3 +144,23 @@ CREATE TABLE `tbl_supplies` (
 -- ----------------------------
 -- Records of tbl_supplies
 -- ----------------------------
+
+-- ----------------------------
+-- Table structure for `tbl_users`
+-- ----------------------------
+DROP TABLE IF EXISTS `tbl_users`;
+CREATE TABLE `tbl_users` (
+  `id` bigint(7) unsigned zerofill NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) CHARACTER SET utf8 NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `name` varchar(80) CHARACTER SET utf8 NOT NULL,
+  `email` varchar(80) CHARACTER SET utf8 NOT NULL,
+  `usertype` tinyint(1) NOT NULL,
+  `archive` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of tbl_users
+-- ----------------------------
+INSERT INTO tbl_users VALUES ('0000001', 'admin_bb', 'boybawang', 'admin boy bawang', 'boybawang@dswd.net', '1', '0');
